@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{url_for('static', filename='images/favicon.ico')}}"
+    />
     <!--Bootstrap css cdn-->
     <link
       rel="stylesheet"
@@ -72,7 +76,11 @@
       crossorigin="anonymous"
     />
     <!--Select2-->
-    <link rel="stylesheet" type="text/css" href="cdn/select2/select2.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename='cdn/select2/select2.min.css')}}"
+    />
     <!--Magnific popper cdn-->
     <link
       rel="stylesheet"
@@ -89,7 +97,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="fonts/linearicons-v1.0.0/icon-font.min.css"
+      href="{{url_for('static',filename='fonts/linearicons-v1.0.0/icon-font.min.css')}}"
     />
     <!-- Nav Font Noto -->
     <link
@@ -167,9 +175,9 @@
       crossorigin="anonymous"
     ></script>
     <!--===============================================================================================-->
-    <script src="cdn/daterangepicker/moment.min.js"></script>
+    <script src="{{url_for('static', filename='cdn/daterangepicker/moment.min.js')}}"></script>
     <!--===============================================================================================-->
-    <script src="cdn/parallax100/parallax100.js"></script>
+    <script src="{{url_for('static', filename='cdn/parallax100/parallax100.js')}}"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"
       integrity="sha256-v00gso3ox/d0KLJDJew6+zm29+J39rYWZvOgoXzDtCs="
@@ -221,9 +229,9 @@
       crossorigin="anonymous"
     ></script>
     <!--===============================================================================================-->
-    <script src="cdn/slick/slick.min.js"></script>
+    <script src="{{url_for('static', filename='cdn/slick/slick.min.js')}}"></script>
     <!--===============================================================================================-->
-    <script src="cdn/select2/select2.min.js"></script>
+    <script src="{{url_for('static', filename='cdn/select2/select2.min.js')}}"></script>
     <!--===============================================================================================-->
     <script>
       $(".js-pscroll").each(function () {
@@ -255,10 +263,10 @@
       });
     </script>
     <!--===============================================================================================-->
-    <script src="cdn/daterangepicker/moment.min.js"></script>
-    <script src="cdn/daterangepicker/daterangepicker.js"></script>
+    <script src="{{url_for('static', filename='cdn/daterangepicker/moment.min.js')}}"></script>
+    <script src="{{url_for('static', filename='cdn/daterangepicker/daterangepicker.js')}}"></script>
     <!--===============================================================================================-->
-    <script src="cdn/parallax100/parallax100.js"></script>
+    <script src="{{url_for('static', filename='cdn/parallax100/parallax100.js')}}"></script>
     <script>
       $(".parallax100").parallax100();
     </script>
