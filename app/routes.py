@@ -1,16 +1,18 @@
 from app import app
+from flask import Flask, render_template
 
 @app.route('/')
 @app.route('/index')
 @app.route('/home')
 def index():
-    return app.send_static_file('main.html', title="Home")
+    return render_template('main.html', title='Home')
 
 @app.route('/shop')
-def index():
-    return app.send_static_file('shop.html', title="Shop")
+def shop():
+    return render_template('shop.html', title='Shop')
 
 
-@app.route('/buy')
-def index():
-    return app.send_static_file('buy.html', title="Buy")
+@app.route('/details')
+def buy():
+    return render_template('details.html', title='Details')
+
