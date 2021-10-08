@@ -6,7 +6,7 @@
         <!-- breadcrumb -->
         <div class="container">
             <div class="bread-crumb flex-w p-b-18">
-                <a href="http://handloomindia.co" class="stext-109 cl8 hov-cl1 trans-04 tg1">
+                <a href="/" class="stext-109 cl8 hov-cl1 trans-04 tg1">
                     Home
                     <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
                 </a>
@@ -220,11 +220,12 @@
                 </div>
             </div>
             <div class="row isotope-grid">
+                {% for product in products %}
                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
                     <!-- Block2 -->
                     <div class="block2">
                         <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree6.jpg')}}" alt="IMG-PRODUCT">
+                            <img src="{{url_for('static',filename=product.img_link)}}" alt="IMG-PRODUCT">
                             <a href="#"
                                 class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
                                 <strong>Instant View</strong>
@@ -232,11 +233,11 @@
                         </div>
                         <div class="block2-txt flex-w flex-t p-t-14">
                             <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details"> Tussar Silk
+                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="{{'/details/'+product.id}}"> {{product.name}}
 
                                     </a></h5>
                                 <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
+                                    {{product.id}}
                                 </a>
                             </div>
                             <div class="block2-txt-child2 flex-r p-t-3">
@@ -247,285 +248,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree1.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details"> Cotton Silk
-                                    </a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree2.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Cotton Silk</a>
-                                </h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree3.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree4.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree5.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree7.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree8.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk
 
-                                    </a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree9.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree10.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree11.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item premium">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{url_for('static',filename='images/saree12.jpg')}}" alt="IMG-PRODUCT">
-                            <a href="#"
-                                class="wsnw block2-btn flex-c-m stext-101 m-l-0 m-r-200 m-b-20 clblack size-101 bor21 hov-btn1 p-lr-15 js-show-modal1 trans-04">
-                                <strong>Instant View</strong>
-                            </a>
-                        </div>
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <h5><a class="m-b-8 cl4 hov-cl1 trans-04 js-name-b2" href="/details">Pure Silk</a></h5>
-                                <a class="stext-74 p-b-6 cmodel">
-                                    T-2412
-                                </a>
-                            </div>
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <i class="fa fa-heart-o"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {%endfor%}
             </div>
             <!-- See more -->
             <div class="flex-c-m flex-w w-full p-t-45">

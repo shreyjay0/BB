@@ -5,7 +5,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1" style="background-image: url(images/new3.jpg);">
+                <div class="item-slick1" style="background-image: url(/static/images/new3.jpg);">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-all-70 respon5">
                             <div class="bgf0 bor20 p-lr-45">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-slick1" style="background-image: url(images/new2.jpg);">
+                <div class="item-slick1" style="background-image: url(/static/images/new2.jpg);">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-all-70 respon5">
                             <div class="bgf0 bor20 p-lr-45" data-appear="fadeInUp" data-delay="0">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-slick1" style="background-image: url(images/new1.jpg);">
+                <div class="item-slick1" style="background-image: url(/static/images/new1.jpg);">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-all-70 respon5">
                             <div class="bgf0 bor20 p-lr-45">
@@ -98,7 +98,7 @@
                 <div class="col-md-6 p-b-30 m-lr-auto bor14">
                     <!-- Block1 -->
                     <div class="block1 mains">
-                        <img src="images/saree02.jpeg" alt="IMG-BANNER">
+                        <img src="{{ url_for('static', filename='images/saree2.jpg')}}" alt="IMG-BANNER">
                         <a href="/shop"
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                     <div class="block1 mains m-t-75">
-                        <img src="images/saree03.jpeg" alt="IMG-BANNER">
+                        <img src="{{ url_for('static', filename='images/saree3.jpg')}}" alt="IMG-BANNER">
                         <a href="/shop"
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="block1 mains m-t-75">
-                        <img src="images/saree05.jpeg" alt="IMG-BANNER">
+                        <img src="{{ url_for('static', filename='images/saree5.jpg')}}" alt="IMG-BANNER">
                         <a href="/shop"
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div
@@ -196,10 +196,10 @@
             </div>
             <div class="row-fine">
                 <div class=" row-in-fine">
-                    <img src="images/saree05.jpeg" class="s-img-1" alt="IMG-BANNER">
+                    <img src="{{ url_for('static', filename='images/saree5.jpg')}}" class="s-img-1" alt="IMG-BANNER">
                 </div>
                 <div class=" row-in-fine">
-                    <img src="images/saree04.jpeg" class="s-img-1" alt="IMG-BANNER">
+                    <img src="{{ url_for('static', filename='images/saree4.jpg')}}" class="s-img-1" alt="IMG-BANNER">
                 </div>
             </div>
         </div>
@@ -216,35 +216,35 @@
                 <div class="container">
                     <div class="item">
                         <figure class="scard-main">
-                            <img src="images/saree01.jpeg" alt="">
+                            <img src="{{ url_for('static', filename='images/saree1.jpg')}}" alt="">
                             <figcaption class="scard-desc">Silk</figcaption>
                         </figure>
                     </div>
 
                     <div class="item">
                         <figure class="scard-main">
-                            <img src="images/saree05.jpeg" alt="">
+                            <img src="{{ url_for('static', filename='images/saree5.jpg')}}" alt="">
                             <figcaption class="scard-desc">Premium</figcaption>
                         </figure>
                     </div>
 
                     <div class="item">
                         <figure class="scard-main">
-                            <img src="images/saree01.jpeg" alt="">
+                            <img src="{{ url_for('static', filename='images/saree1.jpg')}}" alt="">
                             <figcaption class="scard-desc">Silk</figcaption>
                         </figure>
                     </div>
 
                     <div class="item">
                         <figure class="scard-main">
-                            <img src="images/saree02.jpeg" alt="">
+                            <img src="{{ url_for('static', filename='images/saree2.jpg')}}" alt="">
                             <figcaption class="scard-desc">Shiffon</figcaption>
                         </figure>
                     </div>
 
                     <div class="item">
                         <figure class="scard-main">
-                            <img src="images/saree06.jpeg" alt="">
+                            <img src="{{ url_for('static', filename='images/saree6.jpg')}}" alt="">
                             <figcaption class="scard-desc">Georgette</figcaption>
                         </figure>
                     </div>
@@ -271,29 +271,29 @@
                                 <div class="wrap-slick3-dots"></div>
                                 <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
                                 <div class="slick3 gallery-lb">
-                                    <div class="item-slick3" data-thumb="images/saree01.jpeg">
+                                    <div class="item-slick3" data-thumb="{{ url_for('static', filename='images/saree1.jpg')}}">
                                         <div class="wrap-pic-w pos-relative">
-                                            <img src="images/saree01.jpeg" alt="IMG-PRODUCT">
+                                            <img src="{{ url_for('static', filename='images/saree1.jpg')}}" alt="IMG-PRODUCT">
                                             <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                                href="images/saree01.jpeg">
+                                                href="{{ url_for('static', filename='images/saree1.jpg')}}">
                                                 <i class="fa fa-expand"></i>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="item-slick3" data-thumb="images/saree01.jpeg">
+                                    <div class="item-slick3" data-thumb="{{ url_for('static', filename='images/saree1.jpg')}}">
                                         <div class="wrap-pic-w pos-relative">
-                                            <img src="images/saree01.jpeg" alt="IMG-PRODUCT">
+                                            <img src="{{ url_for('static', filename='images/saree1.jpg')}}" alt="IMG-PRODUCT">
                                             <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                                href="images/saree01.jpeg">
+                                                href="{{ url_for('static', filename='images/saree1.jpg')}}">
                                                 <i class="fa fa-expand"></i>
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="item-slick3" data-thumb="images/saree01.jpeg">
+                                    <div class="item-slick3" data-thumb="{{ url_for('static', filename='images/saree1.jpg')}}">
                                         <div class="wrap-pic-w pos-relative">
-                                            <img src="images/saree01.jpeg" alt="IMG-PRODUCT">
+                                            <img src="{{ url_for('static', filename='images/saree1.jpg')}}" alt="IMG-PRODUCT">
                                             <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-                                                href="images/saree01.jpeg">
+                                                href="{{ url_for('static', filename='images/saree1.jpg')}}">
                                                 <i class="fa fa-expand"></i>
                                             </a>
                                         </div>
